@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import sys
-import os
+import os, time
 
 if os.getuid() != 0:
 	print("\033[1;31m\nError:\033[0;m Este script requiere de privilegios de root (sudo)")
@@ -118,6 +118,7 @@ elif X == "29":
     tool = os.system("apt-get install tor torbrowser-launcher")
 elif X == "0":
     tool = os.system("exit")
+    time.sleep(1)
     print("\n\033[1;32mGracias por usar este script, vuelve nuevamente\033[0;m\033[1;37m!\033[0;m")
 else:
     print("\033[1;31m\nError:\033[0;m Carácter incorrecto, intente nuevamente")                                                                     
